@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #030303;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+#content{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 60px;
+}
+header {
+  background-image: url("img.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.main{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+h1 {
+  color: rgb(249, 104, 6);
+  align-self: center;
+  margin: 3rem;
+}
+h1 > span {
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+  color: whitesmoke;
+  align-self: center;
+}
+
+.search {
+  margin: 3rem;
+  background-color: transparent;
+  border: 2px solid #e9e9ec;
+  border-radius: 50px;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.search::placeholder {
+  color: #ffffff;
+}
+
+.search:focus {
+  background-color: #050505;
+  outline: none;
+}
+
+div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie {
+  background-color: #ec742e;
+  border-radius: 3px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+  margin: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  width: 300px;
+}
+
+.movie img {
+  width: 100%;
+}
+
+.movie-info {
+  color: #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
+}
+
+.movie-info h3 {
+  margin: 0;
+}
+
+.movie-info span {
+  background-color: #5f2510;
+  border-radius: 3px;
+  font-weight: bold;
+  padding: 0.25rem 0.8rem;
+}
+.movie-info span.green {
+  color: rgb(39, 189, 39);
+}
+
+.movie-info span.orange {
+  color: rgb(255, 226, 97);
+}
+
+.movie-info span.red {
+  color: rgb(189, 42, 42);
+}
+
+.overview {
+  background-color: #fff;
+  padding: 2rem;
+  position: absolute;
+  max-height: 100%;
+  overflow: auto;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transform: translateY(101%);
+  transition: transform 0.3s ease-in;
+}
+
+.overview h3 {
+  margin-top: 0;
+  padding: 0;
+}
+.sub-para{
+  font-weight: 400;
+  font-size: 1vw;
+  text-transform: capitalize;
+}
+
+.movie:hover .overview {
+  transform: translateY(0);
+}
+@media (max-width: 570px) {
+  .main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
