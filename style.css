@@ -135,15 +135,16 @@ div {
 }
 .sub-para{
   font-weight: 400;
-  font-size: 1vw;
+  font-size: calc(1vw + 1vh);
   text-transform: capitalize;
 }
 
 .movie:hover .overview {
   transform: translateY(0);
 }
-@media (max-width: 570px) {
-  .main{
+@media (max-width: 992px) {
+  
+  #content{
     display: flex;
     flex-direction: column;
     justify-content: center;
